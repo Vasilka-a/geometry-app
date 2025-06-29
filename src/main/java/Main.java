@@ -2,6 +2,7 @@ import geometry.Circle;
 import geometry.Rectangle;
 import geometry.Triangle;
 import geometry.threeDimensional.Cube;
+import geometry.threeDimensional.Sphere;
 import geometry.utils.Converter;
 import geometry.utils.ShapeComparator;
 
@@ -35,9 +36,14 @@ public class Main {
         System.out.println("------------------------------------------------------");
 
         Cube cube = new Cube(12);
-        System.out.println("Cube: ");
-        System.out.println("Volume: " + cube.getVolume());
-        System.out.println("Surface area: " + cube.getSurfaceArea());
+        cube.displayInfo();
+
+        System.out.println("------------------------------------------------------");
+
+        Sphere sphere = new Sphere(44);
+        sphere.displayInfo();
+        System.out.println(Converter.centimetersToMeters(sphere.getSurfaceArea()));
+
     }
 
 
